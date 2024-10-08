@@ -1,0 +1,698 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,800;1,900&display=swap');
+
+:root {
+    --hover-color: #1c9bd7;
+    --title-color: #053667;
+    --parrafo-color: #252525;
+    --boton-color: #0a437b;
+    --font-body: font-family: 'Montserrat', sans-serif;
+    --fondo1: rgb(2, 116, 197);
+    --baseFixture: #063c60;
+    --login: rgb(230, 230, 230);
+    --fondo-menu: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+    --text: rgb(230, 230, 230);
+    --bg-card-header: rgb(248, 248, 248);
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    margin-bottom: 0 !important;
+}
+
+.margenAlto {
+    margin-top: 30px;
+}
+
+/* NAVBAR MENU*/
+
+.header {
+    width: 100%;
+}
+
+.navbar {
+    background-color: var(--baseFixture) !important;
+}
+
+.nav {
+    width: 100%;
+    height: 100%;
+    background-color: var(--fondo1);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+.nav-link a strong {
+    color: var(--title-color);
+}
+
+.nav-link a strong:hover {
+    color: var(--parrafo-color);
+}
+
+.nav-link strong {
+    color: var(--title-color);
+}
+
+.navbar .nav-item:not(:last-child) {
+    margin-right: 22px;
+}
+
+
+.menu a {
+    display: block;
+    padding: 30px;
+    color: var(--text);
+}
+
+.menu a:hover {
+    font-weight: bold !important;
+}
+
+.menu a {
+    text-align: center !important;
+}
+
+@media (min-width: 768px) {
+    .nav {
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+
+    .menu a:hover {
+        background-color: transparent;
+        color: var(--green-light)
+    }
+
+    .hamb {
+        display: none;
+    }
+}
+
+/**/
+
+body {
+    background-color: #323232;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.headerFixture {
+    color: var(--text) !important;
+    background-color: var(--baseFixture) !important;
+}
+
+#example_filter {
+    margin-bottom: 20px;
+}
+
+.tituloNormal {
+    color: #053667 !important;
+}
+
+#logo {
+    border: none;
+    width: 75% !important;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: 0px;
+}
+
+a {
+    font-family: var(--font-body) !important;
+    color: var(--text) !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #1c9bd7;
+}
+
+/* NAVBAR */
+
+#btn_menu {
+    display: block;
+    color: var(--text);
+    font-size: 35px;
+}
+
+#btn_atras {
+    display: block;
+    color: var(--title-color);
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.textoNav {
+    transition: ease 0.5s;
+    color: var(--baseFixture) !important;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.textoNav:hover {
+    color: #1c9bd7;
+}
+
+.textCanvas {
+    font-size: 23px !important;
+}
+
+.btnAccesoLoginMobile {
+    transition: ease 0.5s;
+    width: 100% !important;
+    height: 45px !important;
+    background-color: var(--title-color) !important;
+    border-color: transparent;
+    color: #e7f0fd !important;
+    padding: 15px !important;
+    font-size: 15px !important;
+}
+
+.btnAccesoLoginMobile:hover {
+    background-color: var(--parrafo-color) !important;
+    color: var(--text) !important;
+    font-weight: bold;
+}
+
+/* CAROUSEL DE LAS TABLAS */
+
+
+/* OWL CAROUSEL */
+
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+
+/* clearfix */
+.owl-carousel .owl-wrapper:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+/* display none until init */
+
+.owl-carousel {
+    display: none;
+    position: relative;
+    width: 100%;
+}
+
+.owl-carousel .owl-wrapper {
+    display: none;
+    position: relative;
+}
+
+.owl-carousel .owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.owl-carousel .owl-wrapper-outer.autoHeight {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+.owl-carousel .owl-item {
+    float: left;
+
+}
+
+.owl-controls {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+    cursor: pointer;
+}
+
+.owl-controls {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+.grabbing {
+    cursor: url(grabbing.png) 8 8, move;
+}
+
+/* fix */
+
+
+.owl-theme .owl-controls {
+    margin-top: 35px;
+    text-align: center;
+}
+
+/* Styling Next and Prev buttons */
+
+.owl-theme .owl-controls .owl-buttons div {
+    color: var(--boton-color);
+    display: inline-block;
+    zoom: 1;
+    display: inline;
+    /*IE7 life-saver */
+    margin: 5px;
+    padding: 3px 10px;
+    font-size: 12px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background: var(--boton-color);
+    filter: Alpha(Opacity=50);
+    /*IE7 fix*/
+    opacity: 0.5;
+}
+
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.owl-theme .owl-controls.clickable .owl-buttons div:hover {
+    filter: Alpha(Opacity=100);
+    /*IE7 fix*/
+    opacity: 1;
+    text-decoration: none;
+}
+
+/* Styling Pagination*/
+
+.owl-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#owl-demo .owl-page span {
+    border: 2px solid #063c60;
+}
+
+.owl-theme .owl-controls .owl-page span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 5px 7px;
+    filter: Alpha(Opacity=50);
+    /*IE7 fix*/
+    opacity: 0.9;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border: 2px solid var(--baseFixture);
+}
+
+#owl-demo .owl-page.active span,
+#owl-demo .owl-page:hover span {
+    background: var(--baseFixture) !important;
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span {
+    filter: Alpha(Opacity=100);
+    /*IE7 fix*/
+    background: var(--baseFixture);
+    opacity: 1;
+}
+
+/* If PaginationNumbers is true */
+
+.owl-theme .owl-controls .owl-page span.owl-numbers {
+    height: auto;
+    width: auto;
+    color: var(--baseFixture);
+    padding: 2px 10px;
+    font-size: 12px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+
+/* preloading images */
+.owl-item.loading {
+    min-height: 150px;
+    background: url(https://www.strategir.com/wp-content/uploads/AAPL/loaders/Green%20Circle%20Balls.gif) no-repeat center center
+}
+
+.tituloCarousel {
+    color: var(--baseFixture) !important;
+    /* Cambia "tu-nuevo-color" al color que desees */
+}
+
+.img_carousel {
+    margin: 0px !important;
+    margin-bottom: 10px !important;
+    padding-bottom: 10px !important;
+    float: inline-start;
+    width: 100% !important;
+    height: 100% !important;
+    background-size: cover;
+    background-position: center;
+}
+
+.text_carousel {
+    margin-top: 12px !important;
+    padding-right: 10px;
+}
+
+.text_carousel h3 {
+    font-size: 20px;
+    color: var(--baseFixture) !important;
+    font-weight: 500 !important;
+}
+
+.uk-lightbox-item img {
+    cursor: pointer;
+}
+
+
+
+/* ADMINISTRADOR */
+
+.card-login {
+    background: var(--login) !important;
+    width: 23rem !important;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    border-radius: 40px !important;
+}
+
+.boton-Login {
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    background-color: var(--title-color) !important;
+    color: #ffff !important;
+}
+
+.boton-Register {
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    background-color: #ffff !important;
+    color: var(--title-color) !important;
+}
+
+#register {
+    border: 2px solid;
+    background: none !important;
+    color: var(--boton-color);
+}
+
+.fondo {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+#logoAdmin {
+    border: transparent;
+    width: 70%;
+    padding: 30px !important;
+}
+
+.containerLogin {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.btnAdmin {
+    color: #ffff !important;
+    border: 1px solid;
+    font-weight: normal;
+    background: var(--fondo1) !important;
+    transition: ease 4s all;
+}
+
+.btnAdmin:hover {
+    color: var(--fondo1) !important;
+    border: 2px solid !important;
+    font-weight: normal !important;
+    background: #ffff !important;
+    font-weight: bold !important;
+}
+
+.btn-cancelar {
+    background: var(--danger-color) !important;
+    color: #e7f0fd !important;
+}
+
+.btn-modificar {
+    background: var(--modify-color) !important;
+    color: #e7f0fd !important;
+}
+
+.fa-solid {
+    font-size: x-large !important;
+    color: var(--boton-color) !important;
+    margin: 10px !important;
+}
+
+.tituloAdmin {
+    color: var(--fondo1);
+    font-size: 20px !important;
+    font-weight: bold;
+}
+
+/*-----------------------------*/
+
+.areaFixture {
+    font-weight: 400 !important;
+    height: 35% !important;
+}
+
+/* MEDIA */
+
+
+@media (min-width: 360px) {
+
+    .tituloAdmin {
+        margin-bottom: 20px;
+        font-size: 21px !important;
+    }
+
+    .margenBajo {
+        margin-bottom: 110px;
+    }
+
+    .subtitulo {
+        font-size: 27px;
+    }
+
+    .btnAccesoLoginMobile {
+        font-size: 15px !important;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+
+}
+
+/* Mostrar el ícono solo en dispositivos móviles (pantalla pequeña) */
+@media (min-width: 767px) {
+    .mobile-icon {
+        display: block;
+        /* Opcional: cambia a "block" si deseas que ocupe toda la línea */
+    }
+
+    #owl-demo .item {
+        padding-left: 20px;
+        margin: 3px;
+
+    }
+}
+
+
+@media (min-width: 990px) {
+
+    .nav-link {
+        font-size: 11px !important;
+    }
+
+    .nav-item {
+        margin-right: 5px !important;
+        padding: 5px !important;
+    }
+
+    .navbar-brand {
+        margin-right: 50px !important;
+        margin-left: 20px;
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+
+    #logo {
+        padding: 10px !important;
+    }
+
+    .mobile-icon {
+        display: none !important;
+    }
+
+    .areaFixture {
+        height: 15% !important;
+    }
+
+
+    .navbar-brand {
+        margin-right: 20px !important;
+        margin-left: 50px;
+    }
+
+    .nav-link {
+        font-size: 10px !important;
+    }
+
+    #btn_menu {
+        display: none;
+    }
+
+    .nav-item a {
+        font-size: 14px !important;
+    }
+
+    .nav-link {
+        font-size: 12px !important;
+    }
+
+    .btnAccesoLogin {
+        height: 35px !important;
+        padding: 12px !important;
+        font-size: 11px !important;
+    }
+
+    .nav-item {
+        margin-right: 10px !important;
+    }
+
+}
+
+@media (min-width: 1280px) {
+
+
+    #logo {
+        padding: 10px !important;
+    }
+
+    .nav-item {
+        margin-right: 22px;
+    }
+
+    .nav-item a {
+        font-size: 13px !important;
+    }
+
+    .marginLoginTop {
+        margin-top: 80px;
+    }
+
+    .marginLoginBottom {
+        margin-bottom: 50px;
+    }
+
+    .img_carousel_prod {
+        width: 60% !important;
+        height: 60% !important;
+    }
+
+    #owl-demo .item {
+        padding-left: 30px;
+    }
+
+    .text_carousel {
+        margin-top: 0px !important;
+        padding-right: 0px;
+    }
+
+    .text_carousel h3 {
+        font-size: 25px !important;
+    }
+}
+
+@media (min-width: 1366px) {
+
+    .navbar-brand {
+        margin-right: 300px !important;
+        margin-left: 50px;
+    }
+
+
+    .btnAccesoLogin {
+        height: 20px !important;
+        padding: 5px !important;
+        font-size: 11px !important;
+    }
+
+    .nav-item {
+        margin-top: 20px;
+        margin-right: 30px;
+    }
+
+
+
+    .textoNav1 {
+        font-size: 15px !important;
+    }
+
+    .imagenMarca {
+        width: 150px;
+        margin: 30px;
+        margin-left: 0px;
+    }
+
+}
